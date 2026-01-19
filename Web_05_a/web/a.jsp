@@ -1,9 +1,8 @@
 <%-- 
     Document   : a.jsp
-    Created on : 08-01-2026, 11:15:32
+    Created on : Jan 19, 2026, 10:36:56 AM
     Author     : HOME
 --%>
-
 <%@page import="model.UserDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -27,7 +26,5 @@
                 response.sendRedirect("login.jsp");
             }
         %>
-        
-        
     </body>
 </html>

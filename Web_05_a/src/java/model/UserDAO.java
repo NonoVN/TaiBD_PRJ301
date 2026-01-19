@@ -5,55 +5,50 @@
 package model;
 
 import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import utils.DbUtils;
-
 /**
  *
  * @author HOME
  */
 public class UserDAO {
-
     public ArrayList<UserDTO> list = new ArrayList<>();
-
-    public UserDAO() {
+    
+    public UserDAO(){
     }
-
-    public UserDTO searchById(String username) {
-        try {
+    
+    public UserDTO searchById(String username){
+        try{
             Connection conn = DbUtils.getConnection();
-            String sql = "SELECT * FROM tblUsers "
-                    + " WHERE userID=?";
+            String sql ="SELECT * FROM tblUsers"+" WHERE userID=?";
             System.out.println(sql);
             PreparedStatement pst = conn.prepareStatement(sql);
-            pst.setString(1,username);
+            pst.setString(1, username);
             ResultSet rs = pst.executeQuery();
             
             UserDTO user = null;
-            while (rs.next()) {
+            while(rs.next()){
                 String userID = rs.getString("userID");
                 String fullName = rs.getString("fullName");
                 String password = rs.getString("password");
                 String roleID = rs.getString("roleID");
                 boolean status = rs.getBoolean("status");
-                user = new UserDTO(userID, fullName, password, roleID, status);
+                user = new UserDTO(userID,fullName,password,roleID,status);
             }
-            
             return user;
-        } catch (Exception e) {
+        }
+        catch (Exception E){
             return null;
         }
     }
-
-    public UserDTO login(String username, String password) {
+    
+    public UserDTO login(String username,String password){
         UserDTO u = searchById(username);
-        if (u != null && u.getPassword().equals(password)) {
+        if(u!=null&&u.getPassword().equals(password)){
             return u;
         }
         return null;
     }
-
 }

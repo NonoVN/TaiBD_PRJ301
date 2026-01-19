@@ -9,7 +9,6 @@ package model;
  * @author HOME
  */
 public class UserDTO {
-
     private String userID;
     private String fullName;
     private String password;
@@ -66,5 +65,5 @@ public class UserDTO {
     public void setStatus(boolean status) {
         this.status = status;
     }
-
+    
 }
