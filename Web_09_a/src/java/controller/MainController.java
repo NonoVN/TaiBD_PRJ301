@@ -6,6 +6,7 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author HOME
  */
-public class DeleteUniversityController extends HttpServlet {
+public class MainController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,6 +31,25 @@ public class DeleteUniversityController extends HttpServlet {
             throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
+        
+        String action = request.getParameter("action");
+        String url = "login";
+         
+        if(action.equals("login")){
+            url = "LoginController";
+        }else if(action.equals("logout")){
+            url = "LogoutController";
+        }else if(action.equals("search")){
+            url = "SearchController";
+        }else if(action.equals("deleteUniversity")){
+            url = "DeleteUniversityController";
+        }else if(action.equals("addUniversity")){
+            url = "AddUniversityControlller";
+        }
+        
+        // Chuyen trang
+        RequestDispatcher rd = request.getRequestDispatcher(url);
+        rd.forward(request, response);
         
     }
 
