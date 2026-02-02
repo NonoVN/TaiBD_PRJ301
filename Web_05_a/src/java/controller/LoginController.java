@@ -48,7 +48,7 @@ public class LoginController extends HttpServlet {
                     session.setAttribute("user", user);
                 } else{
                     url = "e403.jsp";
-                    request.setAttribute("message", "Your account had disable contact ADMIN to enable your accout");
+                    session.setAttribute("message", "Your account had disable contact ADMIN to enable your accout");
                 }
             } else {
                 url = "login.jsp";
