@@ -19,7 +19,7 @@
             
             <a href="university-form.jsp"> Add </a>
             <form action="MainController" method="post">
-                <input type="hidden" name="action" value="search"/>
+                <input type="hidden" name="action" value="searchUniversity"/>
                 Input name:
                 <input type="text" name="keywords" value="${keywords}" />
                 <input type="submit" value="Search"/>

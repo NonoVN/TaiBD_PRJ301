@@ -13,20 +13,12 @@
         <servlet-class>controller.LogoutController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>SearchController</servlet-name>
-        <servlet-class>controller.SearchController</servlet-class>
+        <servlet-name>UserController</servlet-name>
+        <servlet-class>controller.UserController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>DeleteUniversityController</servlet-name>
-        <servlet-class>controller.DeleteUniversityController</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>AddUniversityController</servlet-name>
-        <servlet-class>controller.AddUniversityController</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>UpdateUniversityController</servlet-name>
-        <servlet-class>controller.UpdateUniversityController</servlet-class>
+        <servlet-name>UniversityController</servlet-name>
+        <servlet-class>controller.UniversityController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>MainController</servlet-name>
@@ -41,20 +33,12 @@
         <url-pattern>/LogoutController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>SearchController</servlet-name>
-        <url-pattern>/SearchController</url-pattern>
+        <servlet-name>UserController</servlet-name>
+        <url-pattern>/UserController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>DeleteUniversityController</servlet-name>
-        <url-pattern>/DeleteUniversityController</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>AddUniversityController</servlet-name>
-        <url-pattern>/AddUniversityController</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>UpdateUniversityController</servlet-name>
-        <url-pattern>/UpdateUniversityController</url-pattern>
+        <servlet-name>UniversityController</servlet-name>
+        <url-pattern>/UniversityController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

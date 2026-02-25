@@ -18,7 +18,7 @@ import model.UniversityDTO;
  *
  * @author HOME
  */
-public class AddUniversityControlller extends HttpServlet {
+public class AddUniversityController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
