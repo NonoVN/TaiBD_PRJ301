@@ -22,7 +22,7 @@ public class UniversityDAO {
         ArrayList<UniversityDTO> result = new ArrayList<>();
         try {
             Connection conn = DbUtils.getConnection();
-            String sql = "SELECT * FROM tblUniversity WHERE status = 1 " + column + " =?";
+            String sql = "SELECT * FROM tblUniversity WHERE status = 1 AND " + column + " =?";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, value);
             ResultSet rs = ps.executeQuery();

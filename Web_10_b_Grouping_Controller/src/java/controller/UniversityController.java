@@ -17,7 +17,7 @@ import model.UniversityDTO;
 
 /**
  *
- * @author HOME
+ * @author tungi
  */
 public class UniversityController extends HttpServlet {
 
@@ -96,7 +96,7 @@ public class UniversityController extends HttpServlet {
             request.getRequestDispatcher("university-form.jsp").forward(request, response);
         } else {
             request.setAttribute("error", "Không tìm thấy University với ID này!");
-            request.getRequestDispatcher("SearchUniversityController").forward(request, response);
+            request.getRequestDispatcher("search.jsp").forward(request, response);
         }
     }
 
